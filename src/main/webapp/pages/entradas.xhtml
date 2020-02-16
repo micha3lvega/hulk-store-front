@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Entradas de inventario</title>
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous"></link>
+
+	<style>
+.ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-subtable-header,
+	.ui-datatable .ui-datatable-summaryrow {
+	background-color: #54b359 !important;
+}
+
+.ui-paginator-top {
+	background-color: #66BB6A !important;
+}
+
+.ui-paginator .ui-paginator-rpp-options {
+	background-color: #66BB6A !important;
+}
+
+.ui-paginator .ui-paginator-bottom .ui-widget-header .ui-corner-bottom {
+	background-color: #66BB6A !important;
+}
+
+.ui-paginator-bottom {
+	background-color: #66BB6A !important;
+}
+body {
+	background-color: #ededed;
+}
+</style>
+</h:head>
+
+<h:body>
+
+
+	<div class="container">
+	
+		<div class="row" style="margin-top: 1%">
+
+			<div class="col-6 text-left">
+				<p:button value="Nueva entrada" styleClass="GreenButton" />
+			</div>
+
+			<div class="col-6 text-right">
+				<p:button value="Kardex" href="kardex.xhtml"
+					styleClass="PurpleButton" />
+			</div>
+
+		</div>
+
+		<div class="row	" style="margin-top: 1%">
+
+			<div class="col-12">
+				<p:dataTable rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="5,10,15">
+
+					<f:facet name="header">
+		            Entradas de inventario
+		        </f:facet>
+
+					<p:column headerText="Documento">
+
+					</p:column>
+
+					<p:column headerText="Fecha">
+
+					</p:column>
+
+					<p:column headerText="Referencia">
+
+					</p:column>
+
+					<p:column headerText="Detalle">
+
+					</p:column>
+
+					<p:column headerText="Cantidad">
+
+					</p:column>
+
+					<p:column headerText="Total">
+
+					</p:column>
+
+				</p:dataTable>
+			</div>
+		</div>
+
+	</div>
+
+
+</h:body>
+</html>
