@@ -1,0 +1,165 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<title>Kardex</title>
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous"></link>
+
+	<style type="text/css">
+.ui-clock {
+	padding: 5px !important;
+	background-color: transparent !important;
+	color: #546E7A !important;
+	font-family: 'roboto_condensedregular' !important;
+}
+
+.ui-datatable-tablewrapper {
+	padding: 10px !important;
+}
+
+body {
+	background-color: #ededed;
+}
+</style>
+</h:head>
+
+
+<h:body>
+
+	<div class="container" style="margin-top: 2%">
+
+		<div class="row" style="margin-top: 1%; margin-bottom: 1%">
+
+			<div class="col-6 text-left">
+				<p:button value="Entradas" href="entradas.xhtml"
+					styleClass="GreenButton" />
+			</div>
+
+			<div class="col-6 text-right">
+				<p:button value="Salidas" href="salidas.xhtml"
+					styleClass="RedButton" />
+			</div>
+
+		</div>
+
+		<p:panel header="Nueva factura">
+
+			<h:form styleClass="container">
+
+				<div class="form-group" style="margin-top: 2%">
+
+					<div class="row">
+
+						<div class="col-12 text-left">
+
+							<p:outputLabel for="@next" value="Fecha: "
+								styleClass="font-weight-bold" />
+							<p:clock pattern="dd-MM-yyyy HH:mm:ss" mode="server" />
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="row">
+						<div class="col-12">
+							<p:outputLabel for="@next" value="Cliente:"
+								styleClass="font-weight-bold" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-10">
+							<p:selectOneMenu id="client" style="width:100%" filter="true"
+								filterMatchMode="startsWith">
+								<f:selectItem itemLabel="Selecione uno" noSelectionOption="true"
+									itemDisabled="true" />
+							</p:selectOneMenu>
+						</div>
+						<div class="col-2">
+							<p:commandButton value="Nuevo cliente" />
+						</div>
+					</div>
+
+				</div>
+
+				<p:panel header="Informacion cliente" toggleable="true"
+					collapsed="true" toggleSpeed="500">
+
+					<div class="form-group">
+						<h:panelGrid columns="2" style="margin-bottom:10px;width:100%"
+							cellpadding="5">
+							<h:outputText value="Nombre:" styleClass="font-weight-bold" />
+							<h:outputText value="Pepito perez" />
+
+							<h:outputText value="Direccion: " styleClass="font-weight-bold" />
+							<h:outputText value="Av siempre viva 432" />
+
+							<h:outputText value="Telefono: " styleClass="font-weight-bold" />
+							<h:outputText value="3046036500" />
+
+							<h:outputText value="Nit: " styleClass="font-weight-bold" />
+							<h:outputText value="900100562-1" />
+						</h:panelGrid>
+					</div>
+
+				</p:panel>
+
+				<p:panel header="Productos" style="margin-top:10px">
+
+					<f:facet name="actions">
+						<p:commandButton value="Agregar" />
+					</f:facet>
+
+					<p:dataTable editable="true" widgetVar="productsTable"
+						multiViewState="true">
+
+						<p:column headerText="Cantidad">
+
+						</p:column>
+
+						<p:column headerText="Producto">
+
+						</p:column>
+
+						<p:column headerText="Precio unitario">
+
+						</p:column>
+
+						<p:column headerText="Sub total">
+
+						</p:column>
+
+
+						<p:columnGroup type="footer">
+							<p:row>
+								<p:column colspan="3" style="text-align:right"
+									footerText="Total" styleClass="font-weight-bold" />
+								<p:column footerText="$0" styleClass="font-weight-bold" />
+							</p:row>
+						</p:columnGroup>
+					</p:dataTable>
+
+				</p:panel>
+
+			</h:form>
+
+		</p:panel>
+
+
+		<p:dialog header="Nuevo producto">
+
+		</p:dialog>
+
+	</div>
+
+</h:body>
+</html>
