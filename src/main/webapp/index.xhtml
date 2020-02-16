@@ -1,0 +1,141 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<title>Sistema de facturacion</title>
+
+	<meta charset="utf-8"></meta>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous"></link>
+
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"></link>
+
+	<link rel="stylesheet" href="css/index.css"></link>
+
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
+</h:head>
+
+<h:body>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-12">
+
+				<div class="card animated fadeIn delay-1s"
+					onclick="location.href='/pages/kardex.xhtml'">
+
+					<div class="card-title">
+						<div class="text-center" style="padding: 0px; margin-top: 10px">
+							<i class="fas fa-table icon-kardex"></i>
+						</div>
+					</div>
+
+					<div class="card-body text-center"
+						style="padding: 0px; margin-bottom: 13px">
+						<p class="card-text">Kardex</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row" style="margin-top: 2%">
+
+			<div class="col-6 animated fadeIn delay-2s">
+
+				<div class="card" onclick="location.href='/pages/entradas.xhtml'">
+
+					<div class="card-title">
+						<div class="text-center" style="padding: 0px; margin-top: 10px">
+							<i class="fas fa-arrow-circle-left text-entrada"></i>
+						</div>
+					</div>
+
+					<div class="card-body text-center"
+						style="padding: 0px; margin-bottom: 13px">
+						<p class="card-text text-entrada">Entradas</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-6">
+
+				<div class="card animated fadeIn delay-3s"
+					onclick="location.href='/pages/salidas.xhtml'">
+
+					<div class="card-title">
+						<div class="text-center" style="padding: 0px; margin-top: 10px">
+							<i class="fas fa-arrow-circle-right icon-salidas"></i>
+						</div>
+					</div>
+
+					<div class="card-body text-center"
+						style="padding: 0px; margin-bottom: 13px">
+						<p class="card-text text-salidas">Salidas</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="row" style="margin-top: 2%">
+
+			<div class="col-6 animated fadeIn delay-4s">
+
+				<div class="card" onclick="location.href='/pages/entradas.xhtml'">
+
+					<div class="card-title">
+						<div class="text-center" style="padding: 0px; margin-top: 10px">
+							<i class="fas fa-user-friends icon-client"></i>
+						</div>
+					</div>
+
+					<div class="card-body text-center"
+						style="padding: 0px; margin-bottom: 13px">
+						<p class="card-text text-client">Clientes</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-6">
+
+				<div class="card animated fadeIn delay-5s"
+					onclick="location.href='/pages/productos.xhtml'">
+
+					<div class="card-title">
+						<div class="text-center" style="padding: 0px; margin-top: 10px">
+							<i class="fab fa-product-hunt icon-product"></i>
+						</div>
+					</div>
+
+					<div class="card-body text-center"
+						style="padding: 0px; margin-bottom: 13px">
+						<p class="card-text text-product">Productos</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+</h:body>
+</html>

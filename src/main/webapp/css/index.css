@@ -1,0 +1,79 @@
+body {
+	background-color: #ededed;
+}
+
+.container {
+	margin-top: 1%;
+	padding: 1%;
+	background-color: #e3e3e3;
+}
+
+.card-text {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 21px;
+	letter-spacing: 0px;
+	word-spacing: 0.8px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	color: #9370db;
+}
+
+.card {
+	background-color: #d9d9d9;
+}
+
+.fas {
+	font-size: 100px;
+}
+
+.fab {
+	font-size: 100px;
+}
+
+.icon-kardex {
+	color: #9370db;
+}
+
+.text-kardex {
+	color: #9370db;
+}
+
+.icon-factura {
+	color: #936f41;
+}
+
+.text-factura {
+	color: #936f41;
+}
+
+.text-entrada {
+	color: #66BB6A;
+}
+
+.icon-salidas {
+	color: #E53935;
+}
+
+.text-salidas {
+	color: #E53935;
+}
+
+.icon-client {
+	color: #529ad5;
+}
+
+.text-client {
+	color: #529ad5;
+}
+
+.icon-product {
+	color: #a25e09;
+}
+
+.text-product {
+	color: #a25e09;
+}
