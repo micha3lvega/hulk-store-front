@@ -74,12 +74,16 @@ body {
 						<h:outputText value="#{product.name}" />
 					</p:column>
 
-					<p:column headerText="Unidade de medida">
-
+					<p:column headerText="Unidad de medida">
+						<h:outputText value="#{product.measurementUnit.name}" />
 					</p:column>
 
-					<p:column headerText="Precio unitario">
-
+					<p:column headerText="Proveedor">
+						<h:outputText value="#{product.provider.name}" />
+					</p:column>
+					
+					<p:column headerText="Unidad de medida">
+						<h:outputText value="#{product.unitPrice}" />
 					</p:column>
 
 				</p:dataTable>
