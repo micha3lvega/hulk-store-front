@@ -1,0 +1,122 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<title>Clientes</title>
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous"></link>
+	<style>
+.ui-datatable .ui-datatable-header, .ui-datatable .ui-datatable-subtable-header,
+	.ui-datatable .ui-datatable-summaryrow {
+	background-color: #9b5d10 !important;
+}
+
+.ui-paginator-top {
+	background-color: #a25e09 !important;
+}
+
+.ui-paginator .ui-paginator-rpp-options {
+	background-color: #a25e09 !important;
+}
+
+.ui-paginator .ui-paginator-bottom .ui-widget-header .ui-corner-bottom {
+	background-color: #a25e09 !important;
+}
+
+.ui-paginator-bottom {
+	background-color: #a25e09 !important;
+}
+
+body {
+	background-color: #ededed;
+}
+</style>
+</h:head>
+
+<h:body>
+
+	<div class="container">
+
+		<div class="row" style="margin-top: 1%">
+
+			<div class="col-6 text-left">
+				<p:button value="Kardex" href="kardex.xhtml"
+					styleClass="GreenButton" />
+			</div>
+
+			<div class="col-6 text-right">
+				<p:commandButton value="Nuevo Cliente"
+					onclick="PF('dialgProduct').show();" type="button"
+					styleClass="purpleButton" />
+			</div>
+
+		</div>
+
+		<div class="row" style="margin-top: 1%">
+
+			<div class="col-12">
+				<p:dataTable rows="10" paginator="true" value="#{clientManagerBean.client}"
+					var="client"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="5,10,15">
+
+					<f:facet name="header">
+		            	Clientes
+		        	</f:facet>
+
+					<p:column headerText="Nombre">
+						<h:outputText value="#{client.name}" />
+					</p:column>
+
+					<p:column headerText="Apellidos">
+						<h:outputText value="#{client.lastName}" />
+					</p:column>
+
+					<p:column headerText="Email">
+						<h:outputText value="#{client.lastName}" />
+					</p:column>
+
+				</p:dataTable>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<p:dialog header="Nuevo producto" id="dialgProduct" appendTo="@(body)"
+		modal="true" widgetVar="dialgProduct">
+
+		<h:form>
+
+			<div class="row">
+
+				<div class="col-12">
+
+					<h:inputText />
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-12"></div>
+
+			</div>
+
+
+		</h:form>
+
+	</p:dialog>
+
+</h:body>
+
+</html>
