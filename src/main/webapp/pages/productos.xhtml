@@ -61,7 +61,7 @@ body {
 		<div class="row" style="margin-top: 1%">
 
 			<div class="col-12">
-				<p:dataTable rows="10" paginator="true"
+				<p:dataTable rows="10" paginator="true" value="#{productBean.products}" var="product"
 					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 					rowsPerPageTemplate="5,10,15">
 
@@ -71,7 +71,7 @@ body {
 
 
 					<p:column headerText="Nombre">
-
+						<h:outputText value="#{product.name}" />
 					</p:column>
 
 					<p:column headerText="Unidade de medida">
